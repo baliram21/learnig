@@ -22,7 +22,7 @@ public class FindDuplicateInArray_Java8 {
                 .stream()
                 .filter(entry -> entry.getValue() > 1)
                 .map(Map.Entry::getKey)
-                .collect(Collectors.toList());
+                .toList();
 
         System.out.println("Duplicate numbers in the array: " + duplicates);
     }

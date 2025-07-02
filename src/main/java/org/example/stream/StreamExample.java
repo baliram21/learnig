@@ -21,7 +21,7 @@ public class StreamExample {
         List<Integer> sortedDesc2 = list.stream().sorted(Comparator.reverseOrder()).toList();
       //  System.out.println(sortedDesc1);
 
-        Optional<Integer> max = list.stream().max((e1, e2) -> e1.compareTo(e2));
+        Optional<Integer> max = list.stream().max(Integer::compareTo);
 
         Optional<Integer> max1 = list.stream().max(Integer::compareTo);
         System.out.println(max.get());
