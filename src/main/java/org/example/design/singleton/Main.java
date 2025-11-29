@@ -7,7 +7,5 @@ public class Main {
         connection.showMessage();
     }
 
-
-
 }
 

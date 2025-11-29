@@ -8,7 +8,7 @@ public class TestPoly {
     }
 }
 
-class Parent {
+/*class Parent {
     public Parent() {
         super();  // Calls the constructor of java.lang.Object (implicit if not written)
         System.out.println("instantiate a parent");
@@ -21,7 +21,7 @@ class Child extends Parent {
         // which means Parent's constructor is called first
         System.out.println("instantiate a child");
     }
-}
+}*/
 
 /*
 Output:

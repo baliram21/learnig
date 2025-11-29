@@ -1,6 +1,4 @@
-package org.example.thread.racecondition;
-
-import java.util.concurrent.atomic.AtomicInteger;
+package org.example.thread.counter;
 
 public class MyThread implements Runnable {
    // AtomicInteger count = new AtomicInteger(0);
@@ -9,7 +7,7 @@ public class MyThread implements Runnable {
     @Override
     public void run() {
         System.out.println(Thread.currentThread().getName());
-        for (int i = 1; i <= 100; i++) {
+        for (int i = 1; i <= 1000; i++) {
             count=count+i;
            // count.incrementAndGet();
         }
@@ -26,12 +24,12 @@ public class MyThread implements Runnable {
         Thread t1 = new Thread(th, "Thread-A");
         Thread t2 = new Thread(th, "Thread-B");
 
+       // t1.start();
         t1.start();
-      /*  t1.start();
         t2.start();
 
         t1.join();
-        t2.join();*/
+        t2.join();
 
         System.out.println("Final Count: " + th.getCount());
     }

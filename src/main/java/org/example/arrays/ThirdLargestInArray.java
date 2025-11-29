@@ -10,8 +10,7 @@ class ThirdLargestInArray {
         } 
   
         // Initialize first, second and third Largest element 
-        int first = arr[0], second = Integer.MIN_VALUE, 
-                            third = Integer.MIN_VALUE; 
+        int first = arr[0], second = Integer.MIN_VALUE, third = Integer.MIN_VALUE;
   
         // Traverse array elements to find the third Largest 
         for (int i = 1; i < arr_size; i++) { 
