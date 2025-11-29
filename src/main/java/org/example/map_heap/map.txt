@@ -1,0 +1,121 @@
+1. What is Map in Java?
+
+A Map stores data in key-value pairs where keys are unique.
+
+2. Can Map have duplicate keys?
+
+No. Keys must be unique.
+Values can be duplicate.
+
+3. Can HashMap store null keys?
+
+Yes → only one null key.
+
+4. What is load factor?
+
+Load factor decides when to resize the map.
+Default = 0.75
+
+5. What is the default capacity of HashMap?
+
+16 buckets.
+
+6. When does HashMap resize?
+
+When size > (capacity × load factor).
+Example: 16 × 0.75 = 12.
+
+7. How does HashMap handle collision?
+
+Using:
+
+LinkedList chaining
+
+Tree (Red-Black Tree) if bucket size > 8
+
+8. Why Tree structure after 8 nodes?
+
+To improve performance from O(n) → O(log n).
+
+9. Is HashMap thread-safe?
+
+No.
+Use ConcurrentHashMap for thread-safe operations.
+
+10. Difference between HashMap and Hashtable?
+
+HashMap = not synchronized
+
+Hashtable = synchronized (slow)
+
+HashMap allows null key/value
+
+Hashtable does NOT allow nulls
+
+11. What is fail-fast iterator?
+
+HashMap iterator throws ConcurrentModificationException
+if modified during iteration.
+
+12. What is fail-safe iterator?
+
+ConcurrentHashMap iterator does NOT throw exception.
+
+13. How to synchronize a HashMap?
+Map m = Collections.synchronizedMap(new HashMap<>());
+
+14. What is the difference between entrySet() and keySet()?
+
+keySet() → returns only keys
+
+entrySet() → returns key + value (best for looping)
+
+15. What is WeakHashMap?
+
+Keys are garbage collected if no strong reference exists.
+
+16. What is EnumMap?
+
+Map optimized for Enum keys.
+
+17. Why Map is not a child of Collection?
+
+Because Map stores key-value pairs, not elements.
+
+18. What is computeIfAbsent()?
+
+Creates value only when key not found.
+
+19. What is merge()?
+
+Used to combine values.
+
+20. Can TreeMap store null key?
+
+No.
+Will throw NullPointerException.
+
+21. How to maintain insertion order in Map?
+
+Use LinkedHashMap.
+
+22. How to sort Map by keys?
+
+Use TreeMap.
+
+23. How to sort Map by values?
+
+Using stream API.
+
+24. Why HashMap is not ordered?
+
+Because index is based on hash, not order.
+
+25. Internal structure change after Java 8?
+
+HashMap now uses:
+
+LinkedList for small collisions
+
+TreeNodes for large collisions
+to avoid worst-case O(n) attacks.
