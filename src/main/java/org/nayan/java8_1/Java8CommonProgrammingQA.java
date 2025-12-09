@@ -68,6 +68,8 @@ public class Java8CommonProgrammingQA {
                 .collect(Collectors.groupingBy(Student::getDept, Collectors.counting()))
                 .entrySet().stream().max(Map.Entry.comparingByValue()).get();
 
+        String key = results.getKey();
+
         System.out.println(results);
 
         //7. Find the average age of male and female students
@@ -93,6 +95,9 @@ public class Java8CommonProgrammingQA {
                 .skip(2)
                 .findFirst().get();
         System.out.println(student);
+
+        //10. Find the highest rank in each department and then sort department according to rank
+
 
     }
 
