@@ -7,7 +7,7 @@ public class PrintFibonacciInRange {
 
         // Print Fibonacci numbers between 50 and 100
         while (a <= 100) {
-            if (a >= 10 && a <= 100) {
+            if (a >= 0 && a <= 100) {
                 System.out.print(a + " ");
             }
             int c = a + b;

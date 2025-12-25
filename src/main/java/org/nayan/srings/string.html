@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+package org.nayan.srings.string;
+
+public class StringMethods {
+public static void main(String[] args) {
+
+String str = "hello";
+
+/*
+* String + int → int is converted to String and concatenation happens.
+* Output → "hello10"
+*/
+System.out.println(str + 10);
+
+/*
+* Left-to-right evaluation:
+* 10 + 8 = 18  (both are integers)
+* 18 + str → "18hello"
+*/
+System.out.println(10 + 8 + str);
+
+/*
+* Left-to-right evaluation:
+* 10 + str → "10hello"
+* "10hello" + 5 → "10hello5"
+*/
+System.out.println(10 + str + 5);
+
+/*
+* str + 10 → "hello10"
+* "hello10" + 5 → "hello105"
+*/
+System.out.println(str + 10 + 5);
+
+/*
+* 10/5 = 2 (integer division)
+* str + 2 → "hello2"
+*/
+System.out.println(str + 10/5);
+
+/*
+* str + 10 - 5 → NOT ALLOWED
+* Because "-" operator is not valid between a String and an int.
+*/
+// System.out.println(str+10-5);
+
+String s1 = "hello";
+String s2 = "world";
+
+/*
+* Simple concatenation using + operator
+* Output → "helloworld"
+*/
+System.out.println(s1 + s2);
+
+/*
+* concat() method → also joins two strings
+* Output → "helloworld"
+*/
+System.out.println(s1.concat(s2));
+
+/*
+* String.join(delimiter, elements...)
+* join with '-' → "hello-world"
+*/
+System.out.println(String.join("-", s1, s2));
+
+/*
+* join with empty delimiter → "helloworld"
+*/
+System.out.println(String.join("", s1, s2));
+
+/*
+* join with 'hello' as delimiter:
+* join(s1, s2) → delimiter = "hello"
+* -> s2 (only one element) → "world"
+* Because join(delimiter, single-element) returns the element itself.
+*/
+System.out.println(String.join(s1, s2));
+
+/*
+* STRING OBJECT CREATION
+*/
+String s = new String("nayan");   // Creates 1 object in heap; "nayan" literal may also be in SCP
+String s3 = "nayan";              // Uses SCP (String Constant Pool)
+String s4 = new String("nayan");  // New heap object; literal reused from SCP
+
+/*
+* HOW MANY OBJECTS CREATED?
+*
+* "nayan" literal → stored once in SCP
+* new String("nayan") → creates new object in heap
+* new String("nayan") again → creates another object in heap
+*
+* TOTAL:
+* SCP → 1 object
+* HEAP → 2 objects
+*/
+
+/*
+* == → checks reference (memory location)
+* s (heap) vs s3 (SCP) → false
+*/
+System.out.println(s == s3);   // false
+
+/*
+* equals() → compares content
+* content "nayan" == "nayan" → true
+*/
+System.out.println(s.equals(s3)); // true
+
+/*
+* s and s4 both created using new → different heap objects
+*/
+System.out.println(s == s4);  // false
+
+/*
+* s3 is SCP literal; s4 is heap object → false
+*/
+System.out.println(s3 == s4); // false
+
+/*
+* intern()
+* s.intern() returns reference from SCP
+* s3 is already SCP literal → true
+*/
+System.out.println(s.intern() == s3); // true
+}
+}
+
+/*
+* ===============================
+* WHY STRING IS IMMUTABLE IN JAVA?
+* ===============================
+*
+* 1. Security:
+*    Strings are used in class loading, file paths, network connections.
+*    If they were mutable, someone could change content → security risk.
+*
+* 2. String Constant Pool (SCP):
+*    Since Strings are immutable, JVM can safely share objects → memory optimization.
+*
+* 3. Thread-safety:
+*    Immutable objects are inherently thread-safe → no synchronization needed.
+*
+* 4. Caching:
+*    hashCode() of a String is cached.
+*    If String were mutable → hash would change → breaks HashMap, HashSet.
+*
+* 5. Performance:
+*    Immutable strings allow JVM to optimize aggressively.
+*
+* That's why strings are final, and char[] inside String is also final since Java 9.
+*/
+
+We can print StringBuffer/StringBuilder directly because println() internally calls toString().
+But we prefer using toString() for clarity, immutability, safer method returns, and consistent coding practices.
+
+| Feature       | **String**             | **StringBuffer**                | **StringBuilder**   |
+| ------------- | ---------------------- | ------------------------------- | ------------------- |
+| Mutability    | **Immutable**          | **Mutable**                     | **Mutable**         |
+| Thread Safety | Not Thread-safe        | **Thread-safe (synchronized)**  | **Not Thread-safe** |
+| Performance   | Slow for modifications | Slower (due to synchronization) | **Fastest**         |
+| Introduced In | Java 1.0               | Java 1.0                        | Java 1.5            |
+
+</body>
+</html>

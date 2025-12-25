@@ -25,7 +25,8 @@ public class CompletableFutureDemo {
 
             CompletableFuture<String> asyncTask3 = CompletableFuture.supplyAsync(() -> {
                 return "Hello " +Thread.currentThread().getName();
-            }, poolExecutor).thenApply((String val)->{
+            }, poolExecutor)
+                    .thenApply((String val)->{
                 return val+ "Nayan Kumar "+Thread.currentThread().getName();
             });
 

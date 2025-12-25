@@ -27,6 +27,6 @@ public class CountCharacter111 {
         System.out.println(collect);
 
        // StringBuilder sb1 = new StringBuilder();
-        Arrays.stream(str.split("")).distinct().sorted(Comparator.reverseOrder());
+        Arrays.stream(str.split("")).distinct().sorted(Comparator.reverseOrder()).toArray(String[]::new);
     }
 }

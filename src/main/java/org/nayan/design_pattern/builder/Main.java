@@ -14,7 +14,7 @@ public class Main {
         User sonu = User.UserBuilder.builder()
                 .setUserId(2)
                 .setName("Sonu")
-                .setEmail("sonu@test.com")
+                //.setEmail("sonu@test.com")
                 .build();
 
         System.out.println(sonu);

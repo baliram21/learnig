@@ -1,5 +1,8 @@
 package org.nayan.tricky_concept;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Puzzle3_TryFinallyReturn {
     public static void main(String[] args) {
         System.out.println("primitiveReturn() -> " + primitiveReturn());
@@ -15,8 +18,8 @@ public class Puzzle3_TryFinallyReturn {
         }
     }
 
-    static java.util.List<Integer> objectReturn() {
-        java.util.List<Integer> list = new java.util.ArrayList<>();
+    static List<Integer> objectReturn() {
+        List<Integer> list = new ArrayList<>();
         try {
             list.add(1);
             return list; // returns reference to list

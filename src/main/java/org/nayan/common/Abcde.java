@@ -82,10 +82,12 @@ public class Abcde {
         System.out.println(sb.toString());
         System.out.println("++++++++++++++++++++++++++++++++");
 
-        map.entrySet().stream().sorted(Map.Entry.comparingByKey(Comparator.reverseOrder())).forEach(e-> System.out.print(e.getKey()));
+        map.entrySet().stream().sorted(Map.Entry.comparingByKey(Comparator.reverseOrder()))
+                .forEach(e-> System.out.print(e.getKey()));
 
         System.out.println("______________________________________");
-        List<Map.Entry<String, Long>> entryList1 = map.entrySet().stream().sorted(Map.Entry.comparingByKey(Comparator.reverseOrder())).collect(Collectors.toList());
+        List<Map.Entry<String, Long>> entryList1 = map.entrySet().stream()
+                .sorted(Map.Entry.comparingByKey(Comparator.reverseOrder())).collect(Collectors.toList());
         System.out.println(entryList1);
 
         System.out.println("______________________________________________");
