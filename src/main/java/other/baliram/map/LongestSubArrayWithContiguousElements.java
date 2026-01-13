@@ -17,6 +17,7 @@ public class LongestSubArrayWithContiguousElements {
             int max = arr[i];
 
             Set<Integer> set = new HashSet<>();
+
             set.add(arr[i]); // add starting element
 
             for (int j = i + 1; j < arr.length; j++) {

@@ -2,7 +2,7 @@ package org.nayan.arr1;
 
 import java.util.Arrays;
 
-public class ARR {
+public class ArrayOperations {
     public static void main(String[] args) {
         int[] a = {5, 6, 7, 2, 3};
         System.out.println("Original Array: " + Arrays.toString(a));

@@ -1,6 +1,7 @@
 package org.nayan.java8.common;
 
 import java.util.Arrays;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class ReverseWords {
@@ -13,5 +14,16 @@ public class ReverseWords {
                 .collect(Collectors.joining(" "));
 
         System.out.println(reversedSentence);
+
+        Optional<String> reduce = Arrays.stream(sentence.split("\\s"))
+                .reduce((a, b) -> b + " " + a);
+        System.out.println(reduce.get());
+
+        String str = "baliram";
+
+        String s1 = str.chars().mapToObj(String::valueOf)
+                .reduce((a, b) -> b + a).get();
+        System.out.println(s1);
+
     }
 }

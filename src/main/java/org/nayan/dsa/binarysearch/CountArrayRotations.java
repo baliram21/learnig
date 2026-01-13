@@ -23,8 +23,11 @@ public class CountArrayRotations {
             }
 
             int mid = start + (end - start) / 2;
+
             int next = (mid + 1) % n;
+            // System.out.println("module next value - "+next +" arr.length "+n);
             int prev = (mid + n - 1) % n;
+            // System.out.println("module prev value - "+prev +" arr.length "+n);
 
             // check if mid is minimum
             if (arr[mid] <= arr[next] && arr[mid] <= arr[prev]) {

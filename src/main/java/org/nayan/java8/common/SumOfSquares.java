@@ -6,6 +6,8 @@ public class SumOfSquares {
     public static void main(String[] args) {
         List<Integer> numbers = List.of(1, 2, 3, 4, 5, 6, 7, 8);
 
+        numbers.stream().reduce(0, Integer::sum);
+
         // Calculate the sum of squares of even numbers
         int sumOfSquares = numbers.stream()
                 .filter(n -> n % 2 == 0)

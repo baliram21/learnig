@@ -1,30 +1,31 @@
 package org.nayan.arr1;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MissingElements {
+
     public static void main(String[] args) {
         int[] arr = {1, 3, 5, 7};
 
-        System.out.println("Missing elements:");
-        findMissingElements(arr);
+        List<Integer> missingElements = findMissingElements(arr);
+        System.out.println(missingElements);
     }
 
-    public static void findMissingElements(int[] arr) {
-        int start = arr[0];
-        int end = arr[arr.length - 1];
+    public static List<Integer> findMissingElements(int[] arr) {
 
-        // Create a boolean array to mark presence of elements
-        boolean[] present = new boolean[end - start + 1];
+        List<Integer> missing = new ArrayList<>();
 
-        // Mark the elements present in the input array
-        for (int num : arr) {
-            present[num - start] = true;
-        }
+        for (int i = 0; i < arr.length - 1; i++) {
+            int current = arr[i];
+            int next = arr[i + 1];
 
-        // Identify the missing elements
-        for (int i = 0; i < present.length; i++) {
-            if (!present[i]) {
-                System.out.print((i + start) + " ");
+            // add all missing numbers between current and next
+            for (int num = current + 1; num < next; num++) {
+                missing.add(num);
             }
         }
+
+        return missing;
     }
 }

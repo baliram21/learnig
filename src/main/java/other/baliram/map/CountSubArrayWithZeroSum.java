@@ -12,7 +12,7 @@ public class CountSubArrayWithZeroSum {
         int i = -1;
         Map<Integer, Integer> map = new HashMap<>();
 
-        map.put(0, 1);
+        map.put(sum, 1);
 
         while (i < arr.length - 1) {
             i++;

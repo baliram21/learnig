@@ -13,6 +13,7 @@ public class LongestSubArrayWithZeroSum {
         int i = -1;
 
         Map<Integer, Integer> map = new HashMap<>();
+
         map.put(sum, i);
 
         while (i < arr.length - 1) {

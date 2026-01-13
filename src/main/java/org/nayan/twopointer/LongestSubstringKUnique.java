@@ -7,7 +7,7 @@ public class LongestSubstringKUnique {
 
     public static String longestSubstringWithKUnique(String s, int k) {
         // Edge cases
-        if (s == null || s.length() == 0 || k == 0) return "";
+        if (s == null || s.isEmpty() || k == 0) return "";
 
         Map<Character, Integer> map = new HashMap<>();
         int left = 0;

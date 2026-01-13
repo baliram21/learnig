@@ -5,12 +5,12 @@ public class BinarySearch {
     public static void main(String[] args) {
         int[] arr = {2,4,5,7,9,11,13,17,19};
         int target = 5;
-        int index = binarysearch(arr, target);
+        int index = binarySearch(arr, target);
         System.out.println(index);
 
     }
 
-    private static int binarysearch(int[] arr, int target) {
+    private static int binarySearch(int[] arr, int target) {
         int start = 0;
         int end = arr.length-1;
 
@@ -29,15 +29,15 @@ public class BinarySearch {
         return -1;
     }
 
-    private static int binarysearchRecursive(int[] arr, int start, int end, int target) {
+    private static int binarySearchRecursive(int[] arr, int start, int end, int target) {
         if (start > end) return -1;
 
         int mid = start + (end - start) / 2;
 
         if (target < arr[mid]) {
-            return binarysearchRecursive(arr, start, mid - 1, target);
+            return binarySearchRecursive(arr, start, mid - 1, target);
         } else if (target > arr[mid]) {
-            return binarysearchRecursive(arr, mid + 1, end, target);
+            return binarySearchRecursive(arr, mid + 1, end, target);
         } else {
             return mid;
         }

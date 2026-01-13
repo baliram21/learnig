@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 public class StrinSplit {
     public static void main(String[] args) {
-        String str="+91-9891675009";
+        String str="+91-9892525589";
 
         byStringMethod(str);
         byPatternMethod(str);

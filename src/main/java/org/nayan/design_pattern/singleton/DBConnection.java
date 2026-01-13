@@ -14,7 +14,15 @@ public class DBConnection {
         }
         return connection;
     }
-    public void showMessage() { System.out.println("Hello, this is a Singleton instance!");}
+    public void showMessage() {
+        System.out.println("Hello, this is a Singleton instance!");
+    }
+
+    public static void main(String[] args) {
+        DBConnection connection = DBConnection.getInstance();
+        // System.out.println(connection);
+        connection.showMessage();
+    }
 }
 
 /*

@@ -45,8 +45,6 @@ class A {
 
         ArrayList<Integer> res = rearrangeArray(arr);
 
-        for (int num : res) {
-            System.out.print(num + " ");
-        }
+        System.out.println(res);
     }
 }

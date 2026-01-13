@@ -53,7 +53,7 @@ public class Java8CommonProgrammingQA {
         List<String> contacts = studentList.stream()
                 .flatMap(s -> s.getContacts().stream())
                 .distinct()
-                .collect(Collectors.toList());
+                .toList();
         contacts.forEach(System.out::println);
 
         System.out.println("\n==== Q5: Group students by department ====");

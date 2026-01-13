@@ -18,7 +18,7 @@ public class KNearlySortedArray {
         }
 
         // Step 2: For each remaining element:
-        // - Remove smallest element from heap (correct sorted order)
+        // - Remove the smallest element from heap (correct sorted order)
         // - Add current element into heap
         for (int i = k + 1; i < arr.length; i++) {
             System.out.println(pq.remove());  // prints smallest
