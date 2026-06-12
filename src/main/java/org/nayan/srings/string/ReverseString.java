@@ -10,6 +10,11 @@ public class ReverseString {
                 .reduce("", (a, b) -> b + a, (a, b) -> b + a);
 
         System.out.println(reversed);
+
+        String reversedString = str.chars().mapToObj(c -> String.valueOf((char) c))
+                .reduce("", (a, b) -> b + a);
+
+        System.out.println(reversedString);
     }
 
     static String reverse(String s) {

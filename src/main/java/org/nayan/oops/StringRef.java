@@ -2,7 +2,7 @@ package org.nayan.oops;
 
 public class StringRef {
 	public static void main(String[] args) {
-		String s1 = "abc";      // s1 points to string literal "abc"
+		String s1 = "lld";      // s1 points to string literal "abc"
 		String s2 = "def";      // s2 points to string literal "def"
 		String s3 = s2;         // s3 now points to same object as s2, i.e., "def"
 

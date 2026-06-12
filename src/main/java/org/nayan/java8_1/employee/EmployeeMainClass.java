@@ -53,9 +53,10 @@ public class EmployeeMainClass {
         System.out.println("---------------------------------------------------");
         // Query 5 : Get the names of all employees who have joined after 2022?
         List<String> joinedAfter2022 = emp.stream()
-                .filter(e -> e.getDoj().isAfter(LocalDate.of(2022, 12, 31)))
+                .filter(e -> e.getDoj()
+                        .isAfter(LocalDate.of(2022, 12, 31)))
                 .map(Employee11::getName)
-                .collect(Collectors.toList());
+                .toList();
         System.out.println("Q5 - Employees joined after 2022: " + joinedAfter2022);
 
         System.out.println("---------------------------------------------------");
@@ -94,7 +95,8 @@ public class EmployeeMainClass {
         System.out.println("---------------------------------------------------");
         // Query 10 : How many male and female employees are there in the sales and marketing team?
         Map<String, Map<String, Long>> genderCountInSalesMarketing = emp.stream()
-                .filter(e -> e.getDepartment().equalsIgnoreCase("Sales") || e.getDepartment().equalsIgnoreCase("Marketing"))
+                .filter(e -> e.getDepartment()
+                        .equalsIgnoreCase("Sales") || e.getDepartment().equalsIgnoreCase("Marketing"))
                 .collect(Collectors.groupingBy(
                         Employee11::getDepartment,
                         Collectors.groupingBy(e -> e.getGender().toLowerCase(), Collectors.counting())

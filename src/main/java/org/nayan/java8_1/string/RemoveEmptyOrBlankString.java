@@ -9,7 +9,7 @@ public class RemoveEmptyOrBlankString {
     public static void main(String[] args) {
 
         // Input array with empty strings ("")
-        String[] str = {"abc", "", "def", ""};
+        String[] str = {"lld", "", "def", ""};
 
         // 1️⃣ Convert array to stream → filter out empty strings → collect to List
         List<String> stringList = Arrays.stream(str)
@@ -31,7 +31,7 @@ public class RemoveEmptyOrBlankString {
 
 
         // New input array with blank spaces ("   ")
-        String[] str1 = {"abc", "", "def", "", "   "};
+        String[] str1 = {"lld", "", "def", "", "   "};
 
         // 4️⃣ filter using isEmpty() → removes only "" but not "   "
         String[] array2 = Arrays.stream(str1)
@@ -47,7 +47,7 @@ public class RemoveEmptyOrBlankString {
 
 
         // New array with null value
-        String[] str2 = {"abc", "", "def", "", "   ", null};
+        String[] str2 = {"lld", "", "def", "", "   ", null};
 
         /*
          ❌ Below code would throw NullPointerException because s.isEmpty()

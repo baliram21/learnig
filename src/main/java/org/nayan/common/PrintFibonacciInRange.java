@@ -5,14 +5,23 @@ public class PrintFibonacciInRange {
         int a = 0;
         int b = 1;
 
-        // Print Fibonacci numbers between 50 and 100
+        // Print Fibonacci numbers till 100
         while (a <= 100) {
-            if (a >= 0 && a <= 100) {
+            System.out.print(a + " ");
+            int c = a + b;
+            a = b;
+            b = c;
+        }
+        // Print Fibonacci numbers between 50 and 100
+        /*while (a <= 100) {
+            if (a >= 50 && a <= 100) {
                 System.out.print(a + " ");
             }
             int c = a + b;
             a = b;
             b = c;
-        }
+        }*/
+
+
     }
 }

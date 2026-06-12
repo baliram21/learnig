@@ -11,8 +11,8 @@ public class ArraysCompare {
         int[] arr2 = {1, 2, 1, 3, 3, 3, 4, 4, 5};
 
         // Convert arrays to Lists
-        List<Integer> list1 = Arrays.stream(arr1).boxed().collect(Collectors.toList());
-        List<Integer> list2 = Arrays.stream(arr2).boxed().collect(Collectors.toList());
+        List<Integer> list1 = Arrays.stream(arr1).boxed().toList();
+        List<Integer> list2 = Arrays.stream(arr2).boxed().toList();
 
         // Create frequency maps
         Map<Integer, Long> freqMap1 = list1.stream()

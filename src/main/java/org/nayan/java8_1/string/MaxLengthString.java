@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 public class MaxLengthString {
     public static void main(String[] args) {
-        String[] str = {"abc", "abcde", "c", "av", "baaa"};
+        String[] str = {"lld", "abcde", "c", "av", "baaa"};
 
         Optional<String> max = Arrays.stream(str).max(String::compareTo);
         System.out.println(max.get());
@@ -31,7 +31,8 @@ public class MaxLengthString {
         String maxLenString = Arrays.stream(str).max(Comparator.comparing(String::length)).get();
         System.out.println(maxLenString);
 
-        String maxLenStr = Arrays.stream(str).reduce((s1, s2) -> s1.length() > s2.length() ? s1 : s2).get();
+        String maxLenStr = Arrays.stream(str)
+                .reduce((s1, s2) -> s1.length() > s2.length() ? s1 : s2).get();
         System.out.println(maxLenStr);
 
 

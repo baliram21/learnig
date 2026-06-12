@@ -98,13 +98,13 @@ public class SubstringMethod {
         the same character array as the original string, which could cause memory leaks. However, starting from Java 7,
                 the substring() method creates a new character array for the substring, so this issue no longer exists.*/
 
-        String str1 = "abc";
+        String str1 = "lld";
         String str2 = "xyz";
         int result1 = str1.compareTo(str2);  // Negative because "abc" is less than "xyz"
         System.out.println(result1);         // Output: -23
 
         String str11 = "ABC";
-        String str21 = "abc";
+        String str21 = "lld";
         System.out.println(str11.compareToIgnoreCase(str21));  // Output: 0
 
         String str111 = "Hello";

@@ -8,16 +8,16 @@ public class ThreeConst {
 
     public ThreeConst(int x) {
         this();  // Calls the no-arg constructor first
-        System.out.print(" " + (x * 2));  // Then prints the result of x * 2
+        System.out.println(" " + (x * 2));  // Then prints the result of x * 2
     }
 
     public ThreeConst(long x) {
         this((int) x);  // Calls the int constructor with x cast to int (4)
-        System.out.print(" " + x);  // Then prints the long value x
+        System.out.println(" " + x);  // Then prints the long value x
     }
 
     public ThreeConst() {
-        System.out.print("no-arg ");  // This runs first in the constructor chain
+        System.out.println("no-arg ");  // This runs first in the constructor chain
     }
 }
 

@@ -2,14 +2,12 @@ package org.nayan.java8_1.string;
 
 import java.util.*;
 import java.util.function.Predicate;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class FilterQuestionsDemo {
 
     public static void main(String[] args) {
 
-        String[] arr = {"abc", "", "ABC", "def", "  ", "abc", "DEF", null, "ghi", "GHI"};
+        String[] arr = {"lld", "", "ABC", "def", "  ", "lld", "DEF", null, "ghi", "GHI"};
 
         // -------------------------------------------------------------------------
         // 1️⃣ QUESTION: How to remove duplicates while filtering?
@@ -99,7 +97,7 @@ public class FilterQuestionsDemo {
         // -------------------------------------------------------------------------
         // 7️⃣ QUESTION: Difference between isEmpty() and isBlank() filtering
         // -------------------------------------------------------------------------
-        String[] blankTest = {"", "  ", "abc"};
+        String[] blankTest = {"", "  ", "lld"};
 
         String[] emptyFiltered = Arrays.stream(blankTest)
                 .filter(s -> !s.isEmpty())

@@ -47,14 +47,14 @@ public class ConfusingOverload {
 
 
         // Additional demonstration:
-        B b = new B();     // creates B object -> prints constructor message
+       B b = new B();     // creates B object -> prints constructor message
         b.hello();         // default method from A interface
     }
 }
 
 interface A {
     default void hello() {
-        System.out.println("Hello Interface A");
+        System.out.println("Hello method of Interface A");
     }
 }
 

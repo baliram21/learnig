@@ -23,7 +23,7 @@ public class BiPredicateExample {
         boolean output=lengthPredicate.and(equalsPredicate).test("madam","madam");
         System.out.println("output : "+output);
 
-        boolean orOutput=lengthPredicate.or(equalsPredicate).test("abc","def");
+        boolean orOutput=lengthPredicate.or(equalsPredicate).test("lld","def");
         System.out.println("orOutput : "+orOutput);
 
         System.out.println(equalsPredicate.test("madam","madam"));

@@ -8,7 +8,7 @@ public class AnagramChecker {
         String str2 = "silent";
 
         // Check if the strings are anagrams
-        boolean areAnagrams = str1.chars().sorted().boxed().collect(Collectors.toList())
+        boolean areAnagrams = str1.chars().sorted().boxed().toList()
                 .equals(str2.chars().sorted().boxed().collect(Collectors.toList()));
 
         System.out.println("Are the strings anagrams? " + areAnagrams);

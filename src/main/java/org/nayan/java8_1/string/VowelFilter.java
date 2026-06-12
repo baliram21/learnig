@@ -19,7 +19,7 @@ public class VowelFilter {
                     return ch == 'a' || ch == 'e' || ch == 'i'
                             || ch == 'o' || ch == 'u';
                 })
-                .collect(Collectors.toList());
+                .toList();
 
         System.out.println("Words starting with vowels: " + vowelWords);
 
@@ -30,6 +30,27 @@ public class VowelFilter {
                 .collect(Collectors.toList());
 
         System.out.println(result);
+
+
+        List<String> vowelWordsByMethodRef = words.stream()
+                .filter(VowelFilter::startsWithVowel)
+                .toList();
+
+        System.out.println("Words starting with vowels: " + vowelWordsByMethodRef);
+
+      //  .filter(word -> startsWithVowel(word))   // lambda
+
+
+
+    }
+
+    private static boolean startsWithVowel(String word) {
+        if (word == null || word.isEmpty()) {
+            return false;
+        }
+        char ch = Character.toLowerCase(word.charAt(0));
+        return ch == 'a' || ch == 'e' || ch == 'i'
+                || ch == 'o' || ch == 'u';
     }
 
 }

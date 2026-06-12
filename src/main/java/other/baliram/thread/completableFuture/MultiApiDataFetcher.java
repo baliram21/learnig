@@ -59,6 +59,5 @@ public class MultiApiDataFetcher {
             System.out.println(stock);
         }).join();
 
-
     }
 }

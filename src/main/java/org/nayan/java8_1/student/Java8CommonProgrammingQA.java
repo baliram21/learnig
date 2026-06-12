@@ -18,26 +18,26 @@ public class Java8CommonProgrammingQA {
                 new Student(8, "Nam", 31, "Male", "Computer Engineering", "Karnataka", 433, Arrays.asList("+9126326355782", "+1673434729929")),
                 new Student(9, "Sonu", 27, "Female", "Computer Engineering", "Karnataka", 7, Arrays.asList("+9126398932782", "+16563434729929", "+5673434729929")),
                 new Student(10, "Shubham", 26, "Male", "Instrumentation Engineering", "Mumbai", 98, Arrays.asList("+912632646482", "+16734323229929")))
-                .collect(Collectors.toList());
+                .toList();
 
         System.out.println("==== Q1: Students with rank between 50 and 100 (inclusive) ====");
         List<Student> q1 = studentList.stream()
                 .filter(s -> s.getRank() >= 50 && s.getRank() <= 100)   // inclusive
-                .collect(Collectors.toList());
+                .toList();
         q1.forEach(System.out::println);
 
         System.out.println("\n==== Q2: Students who stay in Karnataka, sorted by name (ascending) ====");
         List<Student> q2 = studentList.stream()
                 .filter(s -> "Karnataka".equalsIgnoreCase(s.getCity()))
                 .sorted(Comparator.comparing(Student::getFirstName)) // ascending
-                .collect(Collectors.toList());
+                .toList();
         q2.forEach(System.out::println);
 
         System.out.println("\n==== Q2.1: Students who stay in Karnataka, sorted by name (descending) ====");
         List<Student> que2 = studentList.stream()
                 .filter(s -> "Karnataka".equalsIgnoreCase(s.getCity()))
                 .sorted(Comparator.comparing(Student::getFirstName).reversed()) // descending
-                .collect(Collectors.toList());
+                .toList();
 
         que2.forEach(System.out::println);
 
@@ -46,7 +46,7 @@ public class Java8CommonProgrammingQA {
         List<String> deptNames = studentList.stream()
                 .map(Student::getDept)
                 .distinct()
-                .collect(Collectors.toList());
+                .toList();
         deptNames.forEach(System.out::println);
 
         System.out.println("\n==== Q4: All distinct contact numbers (flattened) ====");

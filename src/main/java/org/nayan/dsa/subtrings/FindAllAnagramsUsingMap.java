@@ -6,7 +6,7 @@ public class FindAllAnagramsUsingMap {
 
     public static void main(String[] args) {
         String s = "cbaebabacd";
-        String p = "abc";
+        String p = "lld";
 
         System.out.println(findAnagrams(s, p));
     }

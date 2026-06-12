@@ -31,7 +31,7 @@ public class RemoveDuplicate {
     public static String remove_java8(String str){
 
         StringBuilder sb = new StringBuilder();
-        char[] charArray = str.toCharArray();
+
         str.chars().distinct().forEach(s->sb.append((char) s));
         return sb.toString();
         // System.out.println(sb);
